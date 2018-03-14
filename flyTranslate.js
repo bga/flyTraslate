@@ -26,7 +26,7 @@
             join(
               "<span class=text>", htmlEncode(def["text"]), "</span>", 
               "<br>", 
-              "<span class=pos>/", htmlEncode(def["pos"]["text"]), "/</span>", 
+              "<span class=pos>/", htmlEncode((def["pos"] || { text: "" })["text"]), "/</span>", 
               "<ul class=tr>", 
               (def["tr"] || []).map(function(tr) {
                 return join(
@@ -181,7 +181,7 @@
       var windowSize = [size.bottom[0] + windowHorizontalBorderSize, size.bottom[1] + windowVerticalBorderSize] 
       window.resizeTo(windowSize[0], windowSize[1])
       //# window to center of screen
-      //alert([screen.availWidth, screen.availHeight, screen.left, screen.availTop].join(" "))
+      //alert([screen.availWidth, screen.availHeight, screen.left, screen.availTop, screen.top].join("^"))
       window.moveTo(
         (screen.width - windowSize[0]) / 2, 
         (screen.height - windowSize[1]) / 2
