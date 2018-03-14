@@ -9,7 +9,7 @@
       scriptInsertDomNode.removeChild(script)
       callback(obj)
     }
-    script.src = join("http://translate.yandex.net/dicservice.json/lookup?callback=callback&ui=ru&text=", encodeURIComponent(word), "&lang=", encodeURIComponent(translateDirection), "&flags=1")
+    script.src = "".concat('https://dictionary.yandex.net/dicservice.json/lookupMultiple?ui=ru&srv=tr-text&sid=c5e4739c.5aa93729.88d8b6e6&text=', encodeURIComponent(word), '&dict=', encodeURIComponent(translateDirection), '.regular&flags=103&callback=callback')
     scriptInsertDomNode.insertBefore(script, scriptInsertDomNode.firstChild)
   }
 
@@ -18,15 +18,15 @@
       return he.encode(s)
     }
     fetchTranslation(args["translateDirection"], args["word"], function(data) {
-      trDom.innerHTML = join(
+      trDom.innerHTML = "".concat(
         "<ul class=def>", 
-        (data["def"] || []).map(function(def) {
+        ((data[args["translateDirection"]] || [])["regular"] || []).map(function(def) {
           return join(
             "<li class=def>", 
             join(
               "<span class=text>", htmlEncode(def["text"]), "</span>", 
               "<br>", 
-              "<span class=pos>/", htmlEncode(def["pos"]), "/</span>", 
+              "<span class=pos>/", htmlEncode(def["pos"]["text"]), "/</span>", 
               "<ul class=tr>", 
               (def["tr"] || []).map(function(tr) {
                 return join(
