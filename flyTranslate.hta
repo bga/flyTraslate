@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <HTA:APPLICATION ID="oHTA"
+      APPLICATIONNAME="flyTranslate"
+      BORDER="yes"
+      BORDERSTYLE="normal"
+      CAPTION="yes"
+      maximizeButton="yes"
+      minimizeButton="yes"
+      INNERBORDER=yes
+      ICON="img/wmptour.ico"
+      SHOWINTASKBAR="yes"
+      SINGLEINSTANCE="yes"
+      SYSMENU="yes"
+      VERSION="1.0"
+      WINDOWSTATE="normal"
+      SCROLL="no"
+      selection=yes
+    >
+    <title>flyTranslate</title>
+    <meta charset="utf-8">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        1border: none;
+        outline: none;
+      }
+      body {
+        overflow: visible;
+      }
+      body {
+        padding: 4px;
+      }
+      ul.def {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .def .text {
+        font-weight: bold;
+      }
+      ul.tr {
+        list-style-type: decimal;
+        padding-left: 2em;
+      }
+      .tr .text {
+        font-weight: normal;
+      }
+      ul.ex {
+        list-style-type: none;
+        padding-left: 1em;
+      }
+      span.means {
+      }
+    </style>
+  </head>
+  <body>
+    <div id=trDom></div>
+    <script src=./es5Shim.js></script>
+    <script src=./he.js></script>
+    <script src=./flyTranslate.js></script>
+    <script type="text/javascript" src="_http://getfirebug.com/releases/lite/1.2/firebug-lite.js"></script>  
+  </body>
+</html>
