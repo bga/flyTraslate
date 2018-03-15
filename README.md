@@ -2,5 +2,6 @@ Simple word translate for Windows. Select one word in any program and press `Alt
 Script using 
   [AutoHotKey_L](https://github.com/Lexikos/AutoHotkey_L) for keyboard hook - need installation
   and [MS HTA technology](https://en.wikipedia.org/wiki/HTML_Application) - you already have it
-  
-![example](https://github.com/bga/flyTranslate/raw/master/example.png)  
+
+Translates by default from Russian to English and back - you can edit config in header of flyTraslate.ahk  
+![example](https://raw.githubusercontent.com/bga/flyTraslate/master/example.png)  
