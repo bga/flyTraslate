@@ -190,6 +190,7 @@
   }      
   
   window.onload = function() {
+    //# `Esc` to close window
     document.onkeyup = function() {
       if(event.keyCode == 27) {
         window.close()
