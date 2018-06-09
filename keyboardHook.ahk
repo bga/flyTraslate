@@ -29,7 +29,7 @@ copyText() {
   clipboard := ""
   
   SendInput ^{Ins} ; copy
-  ClipWait 0.01
+  ClipWait 10 ;sec
   text := clipboard
   
   clipboard := lastClipboad
